@@ -1,6 +1,10 @@
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Cartela {
+public class Cartela implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private String nome;
     private ArrayList<Integer> numeros;
 
@@ -23,7 +27,7 @@ public class Cartela {
 
     public void setNumeros(ArrayList<Integer> numeros) { this.numeros = numeros;   }
 
-    public void imprimir(){
-        System.out.println("[Nome: " + nome + ", Numeros: " + numeros + "]");
+    public String toString(){
+        return "[Nome: " + nome + ", Numeros: " + numeros + "]";
     }
 }
